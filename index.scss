@@ -215,10 +215,4 @@ $list-image-path: "#{$component-path}/iman-styles-lists/assets" !default;
   & > .list__item {
     float: left;
   }
-}clude clear-floats;
-  list-style: none;
-  & > li,
-  & > .list__item {
-    float: left;
-  }
 }
