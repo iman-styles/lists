@@ -1,5 +1,4 @@
-//$icon-image-path: "#{$component-path}/iman-styles-icons/icons" !default;
-$list-image-path: "#{$component-path}/../local/iman-styles-common/local/lists/assets" !default;
+$list-image-path: "#{$component-path}/iman-styles-lists/assets" !default;
 
 @function list-path($path) {
   @return "#{$list-image-path}/#{$path}";
@@ -211,6 +210,12 @@ $list-image-path: "#{$component-path}/../local/iman-styles-common/local/lists/as
 
 .list-inline {
   @include clear-floats;
+  list-style: none;
+  & > li,
+  & > .list__item {
+    float: left;
+  }
+}clude clear-floats;
   list-style: none;
   & > li,
   & > .list__item {

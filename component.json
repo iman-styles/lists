@@ -7,6 +7,8 @@
     "index.scss"
   ],
   "files": [
-    "assets/icon-arrow-right-white.png"
-  ]
+    "assets/icon-arrow-right-white.png",
+    "assets/icon-arrow-right-white.svg"
+  ],
+  "repo": "https://raw.github.com/iman-styles/lists"
 }
