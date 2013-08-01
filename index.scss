@@ -1,0 +1,219 @@
+//$icon-image-path: "#{$component-path}/iman-styles-icons/icons" !default;
+$list-image-path: "#{$component-path}/../local/iman-styles-common/local/lists/assets" !default;
+
+@function list-path($path) {
+  @return "#{$list-image-path}/#{$path}";
+}
+
+@function list-url($path) {
+  @return url(list-path($path));
+}
+
+// List with white arrows
+.list-1 {
+  margin: 0;
+  li {
+    @include improve-text-rendering;
+    list-style: none;
+    line-height: 21px;
+    padding-left: 15px;
+    background: list-url('icon-arrow-right-white.png') no-repeat 0 7px;
+    background: list-url('icon-arrow-right-white.svg') no-repeat 0 7px, none;
+    margin-top: 5px;
+  }
+}
+
+// List with a title and a list of links
+.list-2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: baseline(0.25) 0;
+    line-height: 15px;
+  }
+}
+
+// Iman Sidebar Subnav
+.list-3 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 250px 0;
+  position: relative;
+
+  &:after {
+    @include vertical-gradient(#d6d6d6, $white);
+    bottom: 0;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    z-index: 1;
+  }
+
+  .list__item {
+    background: #fafafa;
+    border-top: none;
+    border: 1px solid #ddd;
+    position: relative;
+    z-index: 2;
+
+    &:after {
+      background: #fff;
+      content: "";
+      display: block;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &:first-child {
+      border-top: 1px solid #ddd;
+    }
+  }
+
+  .list__item:hover {
+    background: darken(#fafafa, 1);
+  }
+
+  .list__item a {
+    @include improve-text-rendering;
+    @extend .anchor-3;
+    display: block;
+    font-size:size(1);
+    font-weight: bold;
+    line-height: baseline(1);
+    padding: 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+  }
+
+  .list__item a.is-current {
+    color: $grey-darkest;
+  }
+}
+
+.list-4 {
+  margin:0;
+  padding:0;
+
+  .list__item {
+    line-height: baseline(1.2); // 20px
+    list-style-position: inside;
+    margin: 5px 0;
+    padding: 0 0 0 0;
+  }
+}
+
+.list-5 {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+
+  .list__item {
+    font-size:size(2);
+    line-height: baseline(2); // 40px
+    margin: 5px 0;
+    padding: 0 0 0 0;
+  }
+}
+
+.list-6 {
+  list-style-type: none;
+  margin:0;
+  padding:0;
+
+  .list__item {
+    font-size:size(2);
+    line-height: baseline(1); // 40px
+    margin: 5px 0;
+    padding: 0 0 0 0;
+  }
+}
+
+// Dependants list items
+.dependant {
+  background: $blue-lightest;
+  padding: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  -moz-transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
+  transition: background .25s ease-in-out;
+
+  &:hover {
+    background: lighten($blue-lightest, 3);
+  }
+}
+
+.dependant .dependant__avatar {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+}
+
+.dependant .dependant__copy {
+  font-weight: 400;
+}
+
+.dependant .dependant__title {
+  padding-left: 50px;
+
+  span {
+    display: inline-block;
+  }
+}
+
+.dependant .dependant__actions  {
+  opacity: 0.4;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out;
+}
+
+.dependant:hover .dependant__actions {
+  opacity: 1;
+}
+
+.dependant__actions .icon-edit,
+.dependant__actions .icon-remove {
+  background-color: none;
+  border-radius: 1px;
+  border: 1px solid rgba(#fff, 0.3);
+  padding: 5px;
+  text-align: center;
+  -moz-transition: background-color, border-color .25s, .25s ease-in-out, ease-in-out;
+  -webkit-transition: background-color, border-color .25s, .25s ease-in-out, ease-in-out;
+  transition: background-color, border-color .25s, .25s ease-in-out, ease-in-out;
+
+  .no-opacity & {
+    border: 1px solid #d6edf9;
+  }
+}
+
+.dependant__actions .icon-edit:hover,
+.dependant__actions .icon-remove:hover {
+  background-color: rgba(#fff, 0.2);
+  border-color: rgba(#fff, 0.8);
+  cursor: pointer;
+
+  .no-opacity & {
+    background-color: #33a7e2;
+    border: 1px solid #d6edf9;
+  }
+}
+
+.list-inline {
+  @include clear-floats;
+  list-style: none;
+  & > li,
+  & > .list__item {
+    float: left;
+  }
+}

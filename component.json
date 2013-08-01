@@ -1,0 +1,12 @@
+{
+  "name": "lists",
+  "main": "index.scss",
+  "version": "0.0.1",
+  "dependencies": {},
+  "styles": [
+    "index.scss"
+  ],
+  "files": [
+    "assets/icon-arrow-right-white.png"
+  ]
+}
