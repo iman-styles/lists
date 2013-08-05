@@ -54,8 +54,8 @@ $list-image-path: "#{$component-path}/iman-styles-lists/assets" !default;
 
   .list__item {
     background: #fafafa;
-    border-top: none;
     border: 1px solid #ddd;
+    border-top: none;
     position: relative;
     z-index: 2;
 
