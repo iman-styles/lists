@@ -53,9 +53,10 @@ $list-image-path: "#{$component-path}/iman-styles-lists/assets" !default;
   }
 
   .list__item {
-    background: #fafafa;
+    background: lighten(#fafafa, 1%);
     border: 1px solid #ddd;
     border-top: none;
+    font-family: $font-family-roboto;
     position: relative;
     z-index: 2;
 
@@ -75,7 +76,7 @@ $list-image-path: "#{$component-path}/iman-styles-lists/assets" !default;
   }
 
   .list__item:hover {
-    background: darken(#fafafa, 1);
+    background: #f6f6f6;
   }
 
   .list__item a {
@@ -289,7 +290,7 @@ $list-image-path: "#{$component-path}/iman-styles-lists/assets" !default;
   .list__item a:hover {
     background-color: #fdfdfd;
     background-position: 25px 10px;
-    padding-left: 36px;
+    padding-left: 26px;
   }
 
   .list__item:first-child a{
